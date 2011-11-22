@@ -1,0 +1,5 @@
+fr:
+  activerecord:
+    errors:
+      messages:
+        blank: "Ce champs ne peut pas être vide"

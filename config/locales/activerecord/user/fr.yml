@@ -1,0 +1,38 @@
+fr:
+  activerecord:
+
+    models:
+      user: "Utilisateur"
+      
+    attributes:
+      user:
+        last_name:  "Nom"
+        first_name: "Prénom"
+        email:      "E-mail"
+        login:      "Identifiant"
+        password:   "Mot de passe"
+        user_roles: "Roles"
+
+    errors:
+      models:
+        user:
+          attributes:
+            last_name:
+              blank:      "Veuillez renseigner le nom de l'utilisateur"
+            first_name:
+              blank:      "Veuillez renseigner le prénom de l'utilisateur"
+            email:
+              blank:      "Veuillez renseigner l'email de l'utilisateur"
+            login:
+              blank:      "Veuillez renseigner l'identifiant de l'utilisateur"
+              taken:      "Cet identifiant est déjà utilisé"
+            password:
+              blank:      "Veuillez renseigner le mot de passe de l'utilisateur"
+              too_short:  "Le mot de passe doit contenir au moins %{count} caractères"
+
+  helpers:
+    submit:
+      user:
+        create: "Ajouter un %{model}"
+        update: "Modifier l'%{model}"
+

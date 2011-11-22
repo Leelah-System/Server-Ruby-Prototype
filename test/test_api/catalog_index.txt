@@ -1,0 +1,1 @@
+{"requestUrl":"http://127.0.0.1:3000/api/6aaddf577b472824170e68fda25cb3b183e9fb141f93cd1cc1e0de9b9c7e0894aafca4d818e3482d049200c5d12335052e55b466692e847b977cd63a02895140/catalog","requestMethod":"GET","requestBody":"","headers":["Content-Type","application/json"]}

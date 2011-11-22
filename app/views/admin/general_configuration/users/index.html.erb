@@ -1,0 +1,43 @@
+<h1><%= t('.title') %></h1>
+
+<div class="threequarter">
+    <table class="plain" width="100%">
+        <thead>
+            <tr>
+                <th><%= t('.table.header.first_name') %></th>
+                <th><%= t('.table.header.last_name') %></th>
+                <th><%= t('.table.header.user_roles') %></th>
+                <th><%= t('.table.header.actions') %></th>
+            </tr>
+        </thead>
+
+        <% @users.each do |user| %>
+        <tr>
+            <td><%= user.first_name %></td>
+            <td><%= user.last_name %></td>
+            <td><%= user.user_roles.join(',') %></td>
+            <td class="actions">
+                <%= link_to image_tag("notjustagrid/icons/icon-view.png"),
+                            admin_general_configuration_user_path(user) %>
+                <%= link_to image_tag("notjustagrid/icons/icon-edit.png"),
+                            edit_admin_general_configuration_user_path(user) %>
+                <%= button_to "",
+                            admin_general_configuration_user_path(user),
+                            :method => :delete, :class => "buttonTo" %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
+    <% if @show_form %>
+        <%= link_to t('.hide'), admin_general_configuration_users_path %>
+    <% else %>
+        <%= link_to t('.new'), new_admin_general_configuration_user_path %>
+    <% end %>
+</div>
+
+<% if @show_form %>
+<div class="threequarter">
+    <%= render 'form' %>
+</div>
+<% end %>

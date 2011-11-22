@@ -1,0 +1,23 @@
+fr:
+  admin:
+
+    flash:
+      error:
+        not_logged:       "Vous devez vous authentifier pour accèder à cette section"
+        not_admin_roles:  "Vous ne possèdez pas les droits pour accèder à cette partie"
+
+    header:
+      nb_clients_today: "Nombres de clients aujourd'hui: %{nb_clients_today}"
+      logout_link:      "Se déconnecter"
+
+    menu:
+      welcome:                "Accueil"
+      catalog_management:     "Gestion du catalogue"
+      order_management:       "Gestion des commandes"
+      general_configuration:  "Configuration générale"
+      reports:                "Rapports"
+
+    sub_menu:
+      users_management:       "Gestion des utilisateurs"
+      interfaces_management:  "Gestion des interfaces"
+      system_configuration:   "Configuration système"

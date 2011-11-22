@@ -1,0 +1,32 @@
+fr:
+  admin:
+    catalog_management:
+      product:
+
+        flash:
+          notice:
+            create_success: "Le produit a été correctement crée"
+            update_sucess:  "Le produit a été correctement modifié"
+            delete_success: "Le produit a été correctement supprimé"
+
+        index:
+          title:  "Gestion des utilisateurs"
+          new:    "Créer un nouvel utilisateur"
+          hide:   "Cacher le formulaire"
+          table:
+            header:
+              last_name:  "Nom"
+              first_name: "Prénom"
+              user_roles: "Postes"
+              actions:    "Actions"
+            action:
+              show:   "Voir"
+              update: "Modifier"
+              delete: "Supprimer"
+
+        form:
+          edit_link:  "Modifier cet utilisateur"
+          error:
+            message:
+              one:    "Une erreur interdit la sauvegarde du produit"
+              other:  "%{count} erreurs interdisent la sauvegarde du produi"

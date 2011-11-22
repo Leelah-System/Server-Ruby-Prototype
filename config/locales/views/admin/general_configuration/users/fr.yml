@@ -1,0 +1,32 @@
+fr:
+  admin:
+    general_configuration:
+      users:
+
+        flash:
+          notice:
+            create_success: "L'utilisateur a été correctement crée"
+            update_sucess:  "L'utilisateur a été correctement modifié"
+            delete_success: "L'utilisateur a été correctement supprimé"
+
+        index:
+          title:  "Gestion des utilisateurs"
+          new:    "Créer un nouvel utilisateur"
+          hide:   "Cacher le formulaire"
+          table:
+            header:
+              last_name:  "Nom"
+              first_name: "Prénom"
+              user_roles: "Postes"
+              actions:    "Actions"
+            action:
+              show:   "Voir"
+              update: "Modifier"
+              delete: "Supprimer"
+
+        form:
+          edit_link:  "Modifier cet utilisateur"
+          error:
+            message:
+              one:    "Une erreur interdit la sauvegarde de l'utilisateur"
+              other:  "%{count} erreurs interdisent la sauvegarde de l'utilisateur"

@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  order_status: 
+  reference: MyString
+  amount: 1.5
+
+two:
+  user: 
+  order_status: 
+  reference: MyString
+  amount: 1.5

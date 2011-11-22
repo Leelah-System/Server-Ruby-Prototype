@@ -1,0 +1,14 @@
+#header {
+    margin-left: auto;
+    margin-right: auto;
+    width: 65em;
+    text-align: center;
+    background-color: #99ffcc;
+}
+
+#content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50em;
+    background-color: #ffff99;
+}

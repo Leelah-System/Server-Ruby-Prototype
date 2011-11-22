@@ -1,0 +1,42 @@
+user_roles:
+  # Admin role
+  -
+    label:        "admin"
+    name:         "Administrateur"
+    description:  "Administrateur du serveur"
+
+  # User role
+  -
+    label:        "user"
+    name:         "Utilisateur"
+    description:  "Utilisateur de Leelah-System"
+
+# Users
+users:
+  -
+    first_name: "Thomas"
+    last_name:  "Briois"
+    login:      "tbri"
+    password:   "tbri"
+    email:      "thomas.briois@free.fr"
+    user_roles: [ admin, user ]           # labels of UserRole
+
+  -
+    first_name: "John"
+    last_name:  "Doe"
+    login:      "jdoe"
+    password:   "jdoe"
+    email:      "john.doe@free.fr"
+    user_roles: [ user ]
+
+# Company
+company:
+  name:         "Leelah-System"
+  description:  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt sollicitudin turpis ac egestas."
+  siret:        "123 456 789 01234"
+  address:
+    city:     "Paris"
+    country:  "France"
+  contact:
+    telephone:  "0123456789"
+    email:      "contact@leelah-system.com"

@@ -1,0 +1,22 @@
+<!-- HEADER -->
+<div id="full">
+
+    <!-- LOGO -->
+    <%= logo_company_tag %>
+
+    <div class="text_right obj_right">
+
+        <!-- LOGOUT -->
+        <p><%= link_to t('.logout_link'), admin_logout_path %></p>
+
+        <!-- TODAY DATE -->
+        <p><%= l(Time.now, :format => :long) %></p>
+
+    </div>
+
+    <!-- STATISTICS -->
+    <!--
+    <p><%= t('.nb_clients_today', :nb_clients_today => calculate_nb_clients_today) %></p>
+    -->
+
+</div>

@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order: 
+  product: 
+  package: 
+  quantity: 1.5
+  amount: 1.5
+  address_delivery: 
+
+two:
+  order: 
+  product: 
+  package: 
+  quantity: 1.5
+  amount: 1.5
+  address_delivery: 

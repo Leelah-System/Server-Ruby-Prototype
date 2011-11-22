@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LeelahSystemServer</title>
+
+    <%= stylesheet_link_tag 'reset' %>
+    <%= stylesheet_link_tag 'grid960' %>
+    <%= stylesheet_link_tag 'type' %>
+    <%= stylesheet_link_tag 'forms' %>
+    <%= stylesheet_link_tag 'helpers' %>
+    <%= stylesheet_link_tag 'ux' %>
+    <%= stylesheet_link_tag 'tables' %>
+    <%= stylesheet_link_tag 'admin' %>
+
+    <%= csrf_meta_tag %>
+
+</head>
+
+<body>
+    <div id="container">
+
+        <%= render 'admin/header' %>
+
+        <%= render 'admin/flash_message' %>
+
+        <%= render 'admin/menu' if display_menu? %>
+
+        <%= render 'admin/sub_menu' if display_sub_menu? %>
+
+        <div class="threequarter">
+            <%= yield %>
+        </div>
+    </div>
+
+    <!-- Javascript -->
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" %>
+
+</body>
+</html>

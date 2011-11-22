@@ -1,0 +1,30 @@
+fr:
+  activerecord:
+
+    models:
+      address:  "Adresse"
+
+    attributes:
+      address:
+        additional_address: "Compléments d'adresse"
+        city:               "Ville"
+        country:            "Pays"
+        label:              "libellé"
+        street:             "Rue"
+        street_number:      "Numéro de rue"
+        zip_code:           "Code postal"
+
+    errors:
+      models:
+        address:
+          attributes:
+            country:
+              blank: "Veuillez renseigner le pays"
+            zip_code:
+              blank: "Veuillez renseigner le code postal"
+            city:
+              blank: "Veuillez renseigner la ville"
+            street_number:
+              blank: "Veuillez renseigner le numéro de rue"
+            street:
+              blank: "Veuillez renseigner la rue"

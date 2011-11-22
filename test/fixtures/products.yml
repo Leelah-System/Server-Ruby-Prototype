@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  reference: MyString
+  label: MyString
+  name: MyString
+  price: 1.5
+  description: MyText
+  stocks: 1.5
+  supplier: 
+
+two:
+  reference: MyString
+  label: MyString
+  name: MyString
+  price: 1.5
+  description: MyText
+  stocks: 1.5
+  supplier: 

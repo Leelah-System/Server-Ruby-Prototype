@@ -1,0 +1,21 @@
+fr:
+  activerecord:
+
+    models:
+      contact:  "Contact"
+
+    attributes:
+      contact:
+        email:      "E-mail"
+        mobile:     "Tél. mobile"
+        telephone:  "Téléphone"
+        website:    "Site web"
+
+
+    errors:
+      models:
+        contact:
+          attributes:
+            email:
+              blank: "Veuillez renseigner l'e-mail"
+

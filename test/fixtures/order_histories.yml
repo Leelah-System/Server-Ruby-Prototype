@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order: 
+  order_action: 
+  detail: MyString
+  date: 2011-07-09 19:46:23
+
+two:
+  order: 
+  order_action: 
+  detail: MyString
+  date: 2011-07-09 19:46:23

@@ -1,0 +1,46 @@
+fr:
+  api:
+    message:
+      user:
+        authenticate:
+          success:  Utilisateur authentifié
+          failure:  Identifiant et/ou mot de passe invalide
+
+        sign_up:
+          success:  Utilisateur inscrit
+          failure:  Impossible d'inscrire l'utilisateur
+
+        all:
+          success:  Listing de tous les utilisateurs
+          failure:  Impossible de charger la liste des utilisateurs
+
+      product:
+        index:
+          success:  Listing de tous les produits
+          failure:  Impossible de charger la liste des produits
+
+        create:
+          success:  Creation du produit reussi
+          failure:  Echec lors de la creation du produit
+
+        update:
+          success:  Modification du produit reussi
+          failure:  Echec lors de la modification du produit
+
+        destroy:
+          success:  Suppression du produit reussi
+          failure:  Echec lors de la suppression du produit
+
+      package:
+        index:
+          success:  Listing de tous les packages
+          failure:  Impossible de charger la liste des packages
+
+        show:
+          success:  Recuperation de package reussi
+          failure:  Impossible de charger le package
+
+      order:
+        create:
+          success:  Creation de la commande reussi
+          failure:  Impossible de creer la commande

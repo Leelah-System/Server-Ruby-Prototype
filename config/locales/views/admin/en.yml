@@ -1,0 +1,22 @@
+en:
+  admin:
+    flash:
+      error:
+        not_logged:       "You need to be logged in to access to this section"
+        not_admin_roles:  "You don't own the rights to access to this section"
+
+    header:
+      nb_clients_today: "Number of clients today: %{nb_clients_today}"
+      logout_link:      "Logout"
+
+    menu:
+      welcome:                "Home"
+      catalog_management:     "Catalog management"
+      order_management:       "Order management"
+      general_configuration:  "General configuration"
+      reports:                "Reports"
+
+    sub_menu:
+      users_management:       "User management"
+      interfaces_management:  "Interfaces management"
+      system_configuration:   "System configuration"

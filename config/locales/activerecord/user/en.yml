@@ -1,0 +1,26 @@
+en:
+  activerecord:
+    models:
+      user: "User"
+      
+    attributes:
+      user:
+        last_name:  "Last Name"
+        first_name: "Fisrt Name"
+        email:      "E-mail"
+        login:      "Login"
+        password:   "Password"
+
+    errors:
+      models:
+        user:
+          attributes:
+            last_name:
+              blank:    "Please fill in the username"
+
+  helpers:
+    submit:
+      user:
+        create: "Add a %{model}"
+        update: "Modify th %{model}"
+

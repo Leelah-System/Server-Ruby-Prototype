@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  order: 
+  billing_address: 
+  reference: MyString
+  mailing_date: 2011-07-09 19:46:19
+
+two:
+  order: 
+  billing_address: 
+  reference: MyString
+  mailing_date: 2011-07-09 19:46:19

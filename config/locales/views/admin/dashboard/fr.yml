@@ -1,0 +1,7 @@
+fr:
+  admin:
+    dashboard:
+
+      index:
+        title:                      "Tableau de bord"
+        general_configuration_link: "Configuration générale"

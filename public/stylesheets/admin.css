@@ -1,0 +1,44 @@
+ul.tabs {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.tabs li {
+  float: left;
+  padding: 0;
+  margin: 0;
+  padding-top: 0;
+  background: url(../images/menu/tab_right.png) no-repeat right top;
+  margin-right: 3px;
+}
+
+ul.tabs li a {
+  display: block;
+  padding: 0px 10px;
+  color: #fff;
+  text-decoration: none;
+  background: url(../images/menu/tab_left.png) no-repeat left top;
+}
+
+ul.tabs li a:hover {
+  color: #ff0;
+}
+
+.buttonTo {
+    width: 20px;
+    height: 20px;
+    background: url("../images/notjustagrid/icons/icon-delete.png");
+}
+
+.actions form, .actions div {
+    display: inline;
+}
+
+.icon_text {
+    text-align: center;
+}
+
+.icon_text img {
+    display: block;
+}

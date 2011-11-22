@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  user: 
+  user_action: 
+  detail: MyString
+  ip: MyString
+  date: 2011-07-09 19:46:22
+
+two:
+  user: 
+  user_action: 
+  detail: MyString
+  ip: MyString
+  date: 2011-07-09 19:46:22

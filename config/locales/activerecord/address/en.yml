@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    errors:
+      models:
+        address:
+          attributes:
+            country:
+              blank: "Please fill in the country"
+            zip_code:
+              blank: "Please fill in the postal code"
+            city:
+              blank: "Please fill in the city"
+            street_number:
+              blank: "Please fill in the street number"
+            street:
+              blank: "Please fill in the street name"

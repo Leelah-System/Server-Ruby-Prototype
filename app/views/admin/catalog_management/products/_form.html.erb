@@ -1,0 +1,57 @@
+<%= form_for([:admin, :catalog_management, @product], :html => { :class => "horizontal_form"}) do |product_form| %>
+
+    <% if @product.errors.any? %>
+    <div class="error">
+        <p><%= t('.error.message', :count => @product.errors.count) %></p>
+
+        <ul>
+            <% @product.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+    <div class="threefifth">
+
+        <fieldset>
+            <legend>Produit</legend>
+
+            <ul>
+                <li>
+                    <%= product_form.label :name %>
+                    <%= product_form.text_field :name, :disabled => show_product? %>
+                </li>
+
+                <li>
+                    <%= product_form.label :description %>
+                    <%= product_form.text_area :description, :disabled => show_product?, :rows => 10 %>
+                </li>
+
+                <li>
+                    <%= product_form.label :price %>
+                    <%= product_form.number_field :price, :disabled => show_product? %>
+                </li>
+
+                <li>
+                    <%= product_form.label :stocks %>
+                    <%= product_form.number_field :stocks, :disabled => show_product? %>
+                </li>
+            </ul>
+
+
+        </fieldset>
+
+        <fieldset class="fieldsetbuttons">
+            <div>
+                <%= show_user? ?
+                      link_to("Modifier ce produit", edit_admin_catalog_management_product_path(@product)) :
+                      product_form.submit(:class => "grey styled_button")
+                %>
+            </div>
+        </fieldset>
+
+    </div>
+
+<% end %>
+

@@ -1,0 +1,23 @@
+<%= form_tag admin_authenticate_path, :class => "horizontal_form" do %>
+    <fieldset>
+        <legend><%= t('.title') %></legend>
+        <ul>
+            <li>
+                <%= label_tag :login, t('.label.login') %>
+                <%= text_field_tag :login, params[:login] %>
+            </li>
+
+            <li>
+                <%= label_tag :password, t('.label.password') %>
+                <%= password_field_tag :password, params[:password] %>
+            </li>
+        </ul>
+    </fieldset>
+
+    <fieldset class="fieldsetbuttons">
+        <div>
+            <%= submit_tag t('.label.submit_button'), :class => "grey styled_button" %>
+        </div>
+    </fieldset>
+
+<% end %>

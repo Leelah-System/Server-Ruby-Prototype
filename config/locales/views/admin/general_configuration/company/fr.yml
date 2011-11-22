@@ -1,0 +1,20 @@
+fr:
+  admin:
+    general_configuration:
+      company:
+
+        flash:
+          notice:
+            update_sucess:  "La société a été correctement modifié"
+
+        index:
+          title:      "Gestion de la société"
+          edit_link:  "Modifier la société"
+          field_set:
+            contact:  "Contact"
+            address:  "Adresse"
+          error:
+            message:
+              one:    "Une erreur interdit la sauvegarde de la société"
+              other:  "%{count} erreurs interdisent la sauvegarde de la société"
+

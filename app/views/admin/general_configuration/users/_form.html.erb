@@ -1,0 +1,80 @@
+<%= form_for([:admin, :general_configuration, @user], :html => { :class => "horizontal_form"} ) do |user_form| %>
+
+    <% if @user.errors.any? %>
+    <div class="error">
+        <p><%= t('.error.message', :count => @user.errors.count) %></p>
+
+        <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+    <div class="third">
+
+        <fieldset>
+            <legend>Utilisateur</legend>
+
+            <ul>
+                <li>
+                    <%= user_form.label :first_name %>
+                    <%= user_form.text_field :first_name, :disabled => show_user? %>
+                </li>
+
+                <li>
+                    <%= user_form.label :last_name %>
+                    <%= user_form.text_field :last_name, :disabled => show_user? %>
+                </li>
+
+                <li>
+                    <%= user_form.label :email %>
+                    <%= user_form.text_field :email, :disabled => show_user? %>
+                </li>
+
+                <li>
+                    <%= user_form.label :login %>
+                    <%= user_form.text_field :login, :disabled => show_user? %>
+                </li>
+
+                <li>
+                    <%= user_form.label :password %>
+                    <%= user_form.text_field :password, :disabled => show_user? %>
+                </li>
+
+            </ul>
+        </fieldset>
+
+    </div>
+
+    <div class="third">
+
+        <fieldset>
+            <legend>Roles</legend>
+            <ul>
+                <li>
+                    <ul>
+                        <% for role in UserRole.all %>
+                        <li>
+                            <%= check_box_tag "user[user_role_ids][]", role.id, @user.user_roles.include?(role), :disabled => show_user? %>
+                            <%= role.name %>
+                        </li>
+                        <% end %>
+                    </ul>
+                </li>
+            </ul>
+        </fieldset>
+
+        <fieldset class="fieldsetbuttons">
+            <div>
+                <%= show_user? ?
+                      link_to(t('.edit_link'), edit_admin_general_configuration_user_path(@user)) :
+                      user_form.submit(:class => "grey styled_button")
+                %>
+            </div>
+        </fieldset>
+
+    </div>
+
+<% end %>

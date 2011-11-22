@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LeelahSystemServer</title>
+
+    <%= stylesheet_link_tag 'reset' %>
+    <%= stylesheet_link_tag 'grid960' %>
+    <%= stylesheet_link_tag 'type' %>
+    <%= stylesheet_link_tag 'forms' %>
+    <%= stylesheet_link_tag 'helpers' %>
+    <%= stylesheet_link_tag 'ux' %>
+
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold&subset=latin' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:regular,italic,bold,bolditalic&subset=latin' rel='stylesheet' type='text/css'>
+
+    <%= csrf_meta_tag %>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div class="full text_center">
+            <%= image_tag("Logo_leelah_system.png", :size => '800x300') %>
+            <h1 class="hiddentext">Leelah-Server</h1>
+        </div>
+
+        <div class="quarter hiddentext">centrer formulaire login</div>
+        <div class="half">
+            <%= render 'admin/flash_message' %>
+            <%= yield %>
+        </div>
+
+    </div>
+
+
+</body>
+</html>

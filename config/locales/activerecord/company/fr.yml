@@ -1,0 +1,24 @@
+fr:
+  activerecord:
+
+    models:
+      company: "Société"
+      
+    attributes:
+      company:
+        name:  "Nom"
+
+    errors:
+      models:
+        company:
+          attributes:
+            name:
+              blank:      "Veuillez renseigner le nom de la société"
+
+
+  helpers:
+    submit:
+      company:
+        create: "Ajouter une %{model}"
+        update: "Modifier la %{model}"
+

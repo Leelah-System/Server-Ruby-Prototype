@@ -1,0 +1,124 @@
+<%= form_for(@company, :url => admin_general_configuration_company_update_path, :html => {:multipart => true}) do |company_form| %>
+
+    <% if @company.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= t('.error.message', :count => @company.errors.count) %></h2>
+
+          <ul>
+            <% @company.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div>
+      <%= company_form.label :name %>
+      <br/>
+      <%= company_form.text_field :name, :disabled => show_company? %>
+    </div>
+
+    <div>
+      <%= company_form.label :siret %>
+      <br/>
+      <%= company_form.text_field :siret, :disabled => show_company? %>
+    </div>
+
+    <div>
+      <%= company_form.label :description %>
+      <br/>
+      <%= company_form.text_area :description, :disabled => show_company?, :rows => 3 %>
+    </div>
+
+    <!--<div>-->
+    <!--<%= file_field_tag :test %>-->
+    <!--</div>-->
+
+    <!-- COMPANY CONTACT -->
+    <%= company_form.fields_for :contact do |contact_form| %>
+        <%= field_set_tag t('.field_set.contact') do %>
+
+            <div>
+              <%= contact_form.label :email %>
+              <br/>
+              <%= contact_form.email_field :email, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= contact_form.label :telephone %>
+              <br/>
+              <%= contact_form.telephone_field :telephone, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= contact_form.label :mobile %>
+              <br/>
+              <%= contact_form.telephone_field :mobile, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= contact_form.label :website %>
+              <br/>
+              <%= contact_form.url_field :website, :disabled => show_company? %>
+            </div>
+
+        <% end %>
+    <% end %>
+
+    <!-- COMPANY ADDRESS -->
+    <%= company_form.fields_for :address do |address_form| %>
+        <%= field_set_tag t('.field_set.address') do %>
+
+            <div>
+              <%= address_form.label :street_number %>
+              <br/>
+              <%= address_form.text_field :street_number, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= address_form.label :street %>
+              <br/>
+              <%= address_form.text_field :street, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= address_form.label :additional_address %>
+              <br/>
+              <%= address_form.text_field :additional_address, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= address_form.label :zip_code %>
+              <br/>
+              <%= address_form.text_field :zip_code, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= address_form.label :city %>
+              <br/>
+              <%= address_form.text_field :city, :disabled => show_company? %>
+            </div>
+
+            <div>
+              <%= address_form.label :country %>
+              <br/>
+              <%= address_form.text_field :country, :disabled => show_company? %>
+            </div>
+
+        <% end %>
+    <% end %>
+
+    <!-- COMPANY PICTURE -->
+    <%= company_form.fields_for :picture do |picture_form| %>
+        <div>
+
+        </div>
+    <% end %>
+
+    <div class="actions">
+      <%= show_company? ?
+                  link_to(t('.edit_link'), admin_general_configuration_company_edit_path) :
+                  company_form.submit %>
+    </div>
+
+<% end %>
