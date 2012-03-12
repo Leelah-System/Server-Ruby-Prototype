@@ -106,7 +106,7 @@ ActiveRecord::Schema.define(:version => 20110709174651) do
 
   add_index "order_lines", ["address_delivery_id"], :name => "index_order_lines_on_address_delivery_id"
   add_index "order_lines", ["basket_or_order_id"], :name => "index_order_lines_on_basket_or_order_id"
-  add_index "order_lines", ["package_or_order_id"], :name => "index_order_lines_on_package_or_order_id"
+  add_index "order_lines", ["package_or_product_id"], :name => "index_order_lines_on_package_or_product_id"
 
   create_table "order_statuses", :force => true do |t|
     t.string "label",       :limit => 25, :null => false

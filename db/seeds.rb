@@ -20,7 +20,7 @@ seeds = YAML.load_file (File.join(Rails.root, 'db', 'seeds', 'seeds.yml'))
 #===========================================================================#
 #===   USER_ROLES CREATION
 #===========================================================================#
-UserRole.save(seeds['user_roles'])
+UserRole.create(seeds['user_roles'])
 
 #===========================================================================#
 #===   USERS CREATION
@@ -33,7 +33,7 @@ seeds["users"].each { |user|
   }
 }
 
-User.save(seeds['users'])
+User.create(seeds['users'])
 
 #===========================================================================#
 #===   COMPANY CREATION
@@ -41,4 +41,4 @@ User.save(seeds['users'])
 seeds['company']["address"] = Address.new(seeds['company']["address"])
 seeds['company']["contact"] = Contact.new(seeds['company']["contact"])
 
-Company.save(seeds['company'])
+Company.create(seeds['company'])
