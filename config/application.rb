@@ -16,6 +16,7 @@ module LeelahSystemServer
     config.autoload_paths += %W(#{config.root}/app/models/user_management)
     config.autoload_paths += %W(#{config.root}/app/models/order_management)
     config.autoload_paths += %W(#{config.root}/app/models/product_management)
+    config.autoload_paths += %W(#{config.root}/app/models/category_management)
     config.autoload_paths += %W(#{config.root}/app/models/utils)
 
     # Only load the plugins named here, in the order given (default is alphabetical).

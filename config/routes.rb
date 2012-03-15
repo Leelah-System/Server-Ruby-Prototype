@@ -30,11 +30,13 @@ LeelahSystemServer::Application.routes.draw do
     end
 
     namespace :catalog_management do
-
       root :to => "products#index"
 
       resources :products
 
+      root :to => "categories#index"
+
+      resources :categories 
     end
 
   end
@@ -54,6 +56,10 @@ LeelahSystemServer::Application.routes.draw do
       resources :catalog,  :only => [:index, :show]
 
       resources :order,  :only => [:index, :show, :create]
+
+      resources :order_status,  :only => [:index, :show, :create, :update, :destroy]
+
+      resources :category,  :only => [:index, :show, :create, :update, :destroy]
     end
 
   end

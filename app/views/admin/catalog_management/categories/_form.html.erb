@@ -1,0 +1,53 @@
+<%= form_for([:admin, :catalog_management, @category], :html => { :class => "horizontal_form"}) do |category_form| %>
+
+    <% if @category.errors.any? %>
+    <div class="error">
+        <p><%= t('.error.message', :count => @category.errors.count) %></p>
+
+        <ul>
+            <% @category.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+    <div class="threefifth">
+
+        <fieldset>
+            <legend>Catégorie</legend>
+
+            <ul>
+                <li>
+                    <%= category_form.label :name %>
+                    <%= category_form.text_field :name %>
+                </li>
+
+                <li>
+                    <%= category_form.label :label %>
+                    <%= category_form.text_field :label %>
+                </li>
+
+                <li>
+                    <%= category_form.label :description %>
+                    <%= category_form.text_area :description %>
+                </li>
+
+            </ul>
+
+
+        </fieldset>
+
+        <fieldset class="fieldsetbuttons">
+            <div>
+                <%= show_user? ?
+                      link_to("Modifier cette cat&eacute;gorie", edit_admin_catalog_management_category_path(@category)) :
+                      category_form.submit(:class => "grey styled_button")
+                %>
+            </div>
+        </fieldset>
+
+    </div>
+
+<% end %>
+

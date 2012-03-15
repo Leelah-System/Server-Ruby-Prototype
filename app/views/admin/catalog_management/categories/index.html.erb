@@ -1,0 +1,43 @@
+<h1>Gestion des cat&eacute;gories</h1>
+
+<div class="threequarter">
+    <table class="plain" width="100%">
+        <thead>
+            <tr>
+                <th>Label</th>
+                <th>Nom</th>
+                <th>Description</th>
+		<th>Actions</th>
+            </tr>
+        </thead>
+
+        <% @categories.each do |category| %>
+        <tr>
+            <td><%= category.label %></td>
+            <td><%= category.name %></td>
+            <td><%= category.description %></td>
+            <td class="actions">
+                <%= link_to image_tag("notjustagrid/icons/icon-view.png"),
+                            admin_catalog_management_category_path(category) %>
+                <%= link_to image_tag("notjustagrid/icons/icon-edit.png"),
+                            edit_admin_catalog_management_category_path(category) %>
+                <%= button_to "",
+                            admin_catalog_management_category_path(category),
+                            :method => :delete, :class => "buttonTo"  %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
+    <% if @show_form %>
+        <%= link_to "Cacher le formulaire", admin_catalog_management_categories_path %>
+    <% else %>
+        <%= link_to "Créer une nouvelle catégorie", new_admin_catalog_management_category_path %>
+    <% end %>
+</div>
+
+<% if @show_form %>
+<div class="threequarter">
+    <%= render 'form' %>
+</div>
+<% end %>

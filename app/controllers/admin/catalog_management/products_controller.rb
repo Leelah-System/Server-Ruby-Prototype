@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class Admin::CatalogManagement::ProductsController < Admin::CatalogManagement::CatalogManagementController
 
   #===========================================================================#
@@ -36,7 +37,7 @@ class Admin::CatalogManagement::ProductsController < Admin::CatalogManagement::C
     @product = Product.new(params[:product])
 
     if @product.save
-      redirect_to(admin_catalog_management_products_path, :notice => "Le produit a ete correctement creee")
+      redirect_to(admin_catalog_management_products_path, :notice => "Cr&eacute;ation du produit effectu&eacute;e avec succès")
     else
       render "index"
     end
@@ -47,7 +48,7 @@ class Admin::CatalogManagement::ProductsController < Admin::CatalogManagement::C
     @product = Product.find(params[:id])
 
     if @product.update_attributes(params[:product])
-      redirect_to(admin_catalog_management_products_path, :notice => "Le produit a ete correctement modifie")
+      redirect_to(admin_catalog_management_products_path, :notice => "Modification du produit effectu&eacute;e avec succès")
     else
       render "index"
     end
@@ -58,7 +59,7 @@ class Admin::CatalogManagement::ProductsController < Admin::CatalogManagement::C
     @product = Product.find(params[:id])
     @product.destroy
 
-    redirect_to(admin_catalog_management_products_path, :notice => "Le produit a ete correctement supprime")
+    redirect_to(admin_catalog_management_products_path, :notice => "Suppression du produit effectu&eacute;")
   end
 
   #===========================================================================#
