@@ -14,7 +14,7 @@ class Api::ProductController < Api::ApiController
 
   def show
     product = Product.find(params[:id])
-
+      
     if product
       response = formatted_response(true, product, "")
     else
@@ -61,4 +61,15 @@ class Api::ProductController < Api::ApiController
     render :json => response
   end
 
+  def category
+    products = Product.where(:category_id => params[:category_id])
+
+    if products
+      response = formatted_response(true, {:products => products}, "")
+    else
+      response = formatted_response(false, nil, "")
+    end
+
+    render :json => response
+  end
 end

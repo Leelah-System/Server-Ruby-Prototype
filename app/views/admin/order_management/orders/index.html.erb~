@@ -1,0 +1,45 @@
+<h1>Gestion des produits</h1>
+
+<div class="threequarter">
+    <table class="plain" width="100%">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Stocks</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <% @products.each do |product| %>
+        <tr>
+            <td><%= product.name %></td>
+            <td><%= product.description.truncate(40) %></td>
+            <td><%= product.price %></td>
+            <td><%= product.stocks %></td>
+            <td class="actions">
+                <%= link_to image_tag("notjustagrid/icons/icon-view.png"),
+                            admin_catalog_management_product_path(product) %>
+                <%= link_to image_tag("notjustagrid/icons/icon-edit.png"),
+                            edit_admin_catalog_management_product_path(product) %>
+                <%= button_to "",
+                            admin_catalog_management_product_path(product),
+                            :method => :delete, :class => "buttonTo"  %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
+    <% if @show_form %>
+        <%= link_to "Cacher le formulaire", admin_catalog_management_products_path %>
+    <% else %>
+        <%= link_to "Créer un nouveau produit", new_admin_catalog_management_product_path %>
+    <% end %>
+</div>
+
+<% if @show_form %>
+<div class="threequarter">
+    <%= render 'form' %>
+</div>
+<% end %>

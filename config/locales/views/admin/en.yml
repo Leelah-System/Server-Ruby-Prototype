@@ -12,6 +12,7 @@ en:
     menu:
       welcome:                "Home"
       catalog_management:     "Catalog management"
+      categories_management:  "Category management"
       order_management:       "Order management"
       general_configuration:  "General configuration"
       reports:                "Reports"

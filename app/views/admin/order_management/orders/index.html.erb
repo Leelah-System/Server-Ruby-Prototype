@@ -1,0 +1,47 @@
+<h1>Gestion des commandes</h1>
+
+<div class="threequarter">
+    <table class="plain" width="100%">
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Order Status</th>
+                <th>Delivery Address</th>
+                <th>Reference</th>
+		<th>Amount</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+
+        <% @orders.each do |order| %>
+        <tr>
+            <td><%= order.user_id %></td>
+            <td><%= order.order_status_id %></td>
+            <td><%= order.delivery_address_id %></td>
+            <td><%= order.reference %></td>
+	    <td><%= order.amount %></td>
+            <td class="actions">
+                <%= link_to image_tag("notjustagrid/icons/icon-view.png"),
+                            admin_catalog_management_order_path(order) %>
+                <%= link_to image_tag("notjustagrid/icons/icon-edit.png"),
+                            edit_admin_catalog_management_order_path(order) %>
+                <%= button_to "",
+                            admin_order_management_order_path(order),
+                            :method => :delete, :class => "buttonTo"  %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
+    <% if @show_form %>
+        <%= link_to "Cacher le formulaire", admin_order_management_orders_path %>
+    <% else %>
+        <%= link_to "Créer une nouvelle commande", new_admin_order_management_order_path %>
+    <% end %>
+</div>
+
+<% if @show_form %>
+<div class="threequarter">
+    <%= render 'form' %>
+</div>
+<% end %>

@@ -15,7 +15,7 @@ fr:
       catalog_management:     "Gestion du catalogue"
       categories_management:  "Gestion des catégories"
       order_management:       "Gestion des commandes"
-      general_configuration:  "Configuration générale"
+      general_configuration:  "Configuration générale"      
       reports:                "Rapports"
 
     sub_menu:

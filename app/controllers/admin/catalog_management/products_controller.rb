@@ -18,24 +18,27 @@ class Admin::CatalogManagement::ProductsController < Admin::CatalogManagement::C
 
   def show
     @product = Product.find(params[:id])
+    @category = Category.all
     render "index"
   end
 
 
   def new
     @product = Product.new
+    @category = Category.all
     render "index"
   end
 
   def edit
     @product = Product.find(params[:id])
+    @category = Category.all
     render "index"
   end
 
 
   def create
     @product = Product.new(params[:product])
-
+    @category = Category.all
     if @product.save
       redirect_to(admin_catalog_management_products_path, :notice => "Cr&eacute;ation du produit effectu&eacute;e avec succès")
     else
@@ -46,7 +49,7 @@ class Admin::CatalogManagement::ProductsController < Admin::CatalogManagement::C
 
   def update
     @product = Product.find(params[:id])
-
+    @category = Category.all
     if @product.update_attributes(params[:product])
       redirect_to(admin_catalog_management_products_path, :notice => "Modification du produit effectu&eacute;e avec succès")
     else

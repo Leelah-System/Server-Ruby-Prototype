@@ -29,11 +29,6 @@
                 </li>
 
                 <li>
-                    <%= product_form.label :category_id %>
-                    <%= product_form.select :category_id, "<option>Selectionner une catégorie</option>" + options_from_collection_for_select(@category, :id, :name), :disabled => show_product? %>
-                </li>
-
-                <li>
                     <%= product_form.label :price %>
                     <%= product_form.text_field :price, :disabled => show_product? %>
                 </li>

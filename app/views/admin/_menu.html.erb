@@ -1,10 +1,10 @@
 <div class="quarter">
     <ul>
         <li><%= link_to t('.welcome'), admin_root_path %></li>
-        <li><%= link_to t('.catalog_management'), admin_catalog_management_root_path %></li>
+        <li><%= link_to t('.catalog_management'), admin_catalog_management_products_path %></li>
         <li><%= link_to t('.categories_management'), admin_catalog_management_categories_path %></li>
-        <li><%= link_to t('.order_management'), '#' %></li>
+        <li><%= link_to t('.order_management'), admin_order_management_orders_path %></li>
         <li><%= link_to t('.general_configuration'), admin_general_configuration_root_path %></li>
-        <li><%= link_to t('.reports'), '#' %></li>
+        <li><%= link_to t('.reports'), admin_reports_path %></li>
     </ul>
 </div>

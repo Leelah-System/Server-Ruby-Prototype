@@ -39,6 +39,15 @@ LeelahSystemServer::Application.routes.draw do
       resources :categories 
     end
 
+    namespace :order_management do
+      root :to => "orders#index"
+
+      resources :orders
+    end
+
+    root :to => "reports#index"
+    resources :reports
+
   end
 
   # API part => /api/...
@@ -51,15 +60,19 @@ LeelahSystemServer::Application.routes.draw do
     scope "/:token" do
       match "users" => "user#all"
 
-      resources :product,  :only => [:index, :show, :create, :update, :destroy]
+      match "product/:category_id" => 'product#category', :product => 'category'
 
-      resources :catalog,  :only => [:index, :show]
+      resources :product, :only => [:index, :show, :create, :update, :destroy]
 
-      resources :order,  :only => [:index, :show, :create]
+      resources :catalog, :only => [:index, :show]
 
-      resources :order_status,  :only => [:index, :show, :create, :update, :destroy]
+      resources :order, :only => [:index, :show, :create]
 
-      resources :category,  :only => [:index, :show, :create, :update, :destroy]
+      resources :order_status, :only => [:index, :show, :create, :update, :destroy]
+
+      resources :category, :only => [:index, :show, :create, :update, :destroy]
+
+      
     end
 
   end

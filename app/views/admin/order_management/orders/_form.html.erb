@@ -1,0 +1,62 @@
+<%= form_for([:admin, :order_management, @order], :html => { :class => "horizontal_form"}) do |order_form| %>
+
+    <% if @order.errors.any? %>
+    <div class="error">
+        <p><%= t('.error.message', :count => @order.errors.count) %></p>
+
+        <ul>
+            <% @order.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+    <div class="threefifth">
+
+        <fieldset>
+            <legend>Commande</legend>
+
+            <ul>
+                <li>
+                    <%= order_form.label :user_id %>
+                    <%= order_form.text_field :user_id %>
+                </li>
+
+                <li>
+                    <%= order_form.label :order_status_id %>
+                    <%= order_form.text_field :order_status_id %>
+                </li>
+
+                <li>
+                    <%= order_form.label :delivery_address_id %>
+                    <%= order_form.text_field :delivery_address_id %>
+                </li>
+
+                <li>
+                    <%= order_form.label :reference %>
+                    <%= order_form.text_field :reference %>
+                </li>
+
+		<li>
+                    <%= order_form.label :amount %>
+                    <%= order_form.text_field :amount %>		  
+		</li>
+            </ul>
+
+
+        </fieldset>
+
+        <fieldset class="fieldsetbuttons">
+            <div>
+                <%= show_user? ?
+                      link_to("Modifier ce produit", edit_admin_order_management_order_path(@order)) :
+                      order_form.submit(:class => "grey styled_button")
+                %>
+            </div>
+        </fieldset>
+
+    </div>
+
+<% end %>
+
